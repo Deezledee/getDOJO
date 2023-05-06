@@ -1,6 +1,44 @@
-[{
-"title":  "Gyaku-Zuki",
-"image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683300653/Karate-Assets/1280px-WKF-Karate-World-Championships_2012_Paris_170_k2wkct.jpg",
-"description": "The gyaku-zuki (Japanese: 逆突き, pronounced [ɡjakɯzɯki]) is an attack technique often also referred to as a reverse punch. This is used in many budō disciplines, e.g. in karate or aikidō. This is an embodiment of the choku-zuki (straight punch forward)."
+[
+  {
+    "title": "Gyaku-Zuki",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683300653/Karate-Assets/1280px-WKF-Karate-World-Championships_2012_Paris_170_k2wkct.jpg",
+    "description": "The gyaku-zuki (Japanese: 逆突き, pronounced [ɡjakɯzɯki]) is an attack technique often also referred to as a reverse punch. This is used in many budō disciplines, e.g. in karate or aikidō. This is an embodiment of the choku-zuki (straight punch forward)."
+  },
+  {
+    "title": "Oi-Zuki",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683381307/Karate-Assets/oi-tsuki-technique-karate_gu5bj7.jpg",
+    "description": "An oi-zuki [oiˌzɯki] (Japanese 追 い 突 き) (in Wadō-Ryū: Jun-Zuki, Japanese 順 突 き) is an equal-sided punch used in budo disciplines such as karate or jujitsu. This is an embodiment of the choku-zuki with foot movement. In addition to the block techniques, the Oi-Zuki is one of the first techniques a student learns. The oi-zuki is the counterpart to the gyaku-zuki (fist punch with the side whose leg is not straight at the front).Due to the long movement, the oi-zuki is rarely used in competition. It is mainly found in katas and elementary school techniques."
+  },
+  {
+    "title": "Kizami-Zuki",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683381770/Karate-Assets/Kizami_nakayama_iusqoc.webp",
+    "description": "The Kizami-zuki (Japanese刻み突き, [kɪzamɪˌzɯkɪ]) is a punch that is mainly used in karate."
+  },
+  {
+"title":"Mae-Geri (Front-Kick)",
+"image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683383124/Karate-Assets/Mae-Geri_oxc7sl.jpg",
+"description":"The Mae-Geri (Japanese前蹴り) is a forward kick in the Japanese martial arts (budō), e.g. in karate. There are different versions of the Mae-Geri: Mae-ashi-geri: with the front foot. Mae-Kakato-Geri: Forward heel kick. Mae Kin Geri: with the instep. Mae-Koshi-Geri: with the ball of the foot. Mae-Tobi-Geri: Leaping forward. Nidan-Geri: double kick while jumping. Tsumasaki-Geri: with the tiptoes. A distinction is usually made between pushed (Kekomi) and snapped (Keage) kicks. The snatched kick would be called Mae Geri Keage accordingly."
+  },
+  {
+"title":"Mawashi-Geri (Rotating-Kick)",
+"image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683387989/Karate-Assets/1280px-Karate_2011_EM_und_Karate_Team_046_xbyygy.jpg",
+"description":"The Mawashi-Geri (Japanese回し蹴り) is a semicircular kick in Japanese martial arts (budō), especially in karate. The Mawashi-Geri is not one of the classic kicks of martial arts. It is believed that it only came into widespread use after karate became popular in Japan. An indication of this is the fact that mawashi-geri is not used in any old kata. In competition practice, the Mawashi-Geri serves as an effective attack technique. In contrast to Mae-Geri or Ushiro-Geri, it is not a direct technique, but it reaches its goal in a detour. Therefore, this kick is a good choice in competition, especially when trying to get around strong cover."
 
-}]
+  },
+  {
+    "title":"Yoko-Geri-Keage",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683388196/Karate-Assets/Yoko-Geri-Keage_eyjtkh.jpg",
+    "description": "Yoko geri keage is a snapping kick, so at the completion of the kick, vigorously snap the kicking foot back to the inside of the supporting left legs knee."
+  },
+  {
+    "title":"Yoko-Geri-Kekomi (Side Thrust-Kick))",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683388343/Karate-Assets/kekomi_ogwssk.jpg",
+    "description": "The yoko geri kekomi is a high karate kick, where you lift your leg in front of you and then thrust out the foot sideways. The opponent is hitten with the heel. The foot, the hips and the shoulders form a bow."
+
+  },
+  {
+    "title": "Ushiro-Geri (Backward-Kick)",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683389045/Karate-Assets/Ushiro-geri_hivfi0.jpg",
+    "description":"The Ushiro-Geri (後ろ蹴り) is a backward kick in Japanese martial arts. The Ushiro-Geri is used exclusively as an attack technique. The special difficulty of Ushiro leg techniques lies in the balance and the restricted view to the rear, which always requires a look over the shoulder. A perfect Ushiro-Geri is one of the strongest fighting techniques, against which there is also no block. The important thing here is the distance between the fighters. At short range, the Ushiro-Geri is not feasible. In competition, the Ushiro-Geri is always prepared by a narrower fighting position (kamae). A too wide and deep stance prevents a quick turn."
+  }
+]
