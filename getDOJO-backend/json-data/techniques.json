@@ -15,30 +15,64 @@
     "description": "The Kizami-zuki (Japanese刻み突き, [kɪzamɪˌzɯkɪ]) is a punch that is mainly used in karate."
   },
   {
-"title":"Mae-Geri (Front-Kick)",
-"image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683383124/Karate-Assets/Mae-Geri_oxc7sl.jpg",
-"description":"The Mae-Geri (Japanese前蹴り) is a forward kick in the Japanese martial arts (budō), e.g. in karate. There are different versions of the Mae-Geri: Mae-ashi-geri: with the front foot. Mae-Kakato-Geri: Forward heel kick. Mae Kin Geri: with the instep. Mae-Koshi-Geri: with the ball of the foot. Mae-Tobi-Geri: Leaping forward. Nidan-Geri: double kick while jumping. Tsumasaki-Geri: with the tiptoes. A distinction is usually made between pushed (Kekomi) and snapped (Keage) kicks. The snatched kick would be called Mae Geri Keage accordingly."
+    "title": "Mae-Geri (Front-Kick)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683383124/Karate-Assets/Mae-Geri_oxc7sl.jpg",
+    "description": "The Mae-Geri (Japanese前蹴り) is a forward kick in the Japanese martial arts (budō), e.g. in karate. There are different versions of the Mae-Geri: Mae-ashi-geri: with the front foot. Mae-Kakato-Geri: Forward heel kick. Mae Kin Geri: with the instep. Mae-Koshi-Geri: with the ball of the foot. Mae-Tobi-Geri: Leaping forward. Nidan-Geri: double kick while jumping. Tsumasaki-Geri: with the tiptoes. A distinction is usually made between pushed (Kekomi) and snapped (Keage) kicks. The snatched kick would be called Mae Geri Keage accordingly."
   },
   {
-"title":"Mawashi-Geri (Rotating-Kick)",
-"image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683387989/Karate-Assets/1280px-Karate_2011_EM_und_Karate_Team_046_xbyygy.jpg",
-"description":"The Mawashi-Geri (Japanese回し蹴り) is a semicircular kick in Japanese martial arts (budō), especially in karate. The Mawashi-Geri is not one of the classic kicks of martial arts. It is believed that it only came into widespread use after karate became popular in Japan. An indication of this is the fact that mawashi-geri is not used in any old kata. In competition practice, the Mawashi-Geri serves as an effective attack technique. In contrast to Mae-Geri or Ushiro-Geri, it is not a direct technique, but it reaches its goal in a detour. Therefore, this kick is a good choice in competition, especially when trying to get around strong cover."
-
+    "title": "Mawashi-Geri (Rotating-Kick)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683387989/Karate-Assets/1280px-Karate_2011_EM_und_Karate_Team_046_xbyygy.jpg",
+    "description": "The Mawashi-Geri (Japanese回し蹴り) is a semicircular kick in Japanese martial arts (budō), especially in karate. The Mawashi-Geri is not one of the classic kicks of martial arts. It is believed that it only came into widespread use after karate became popular in Japan. An indication of this is the fact that mawashi-geri is not used in any old kata. In competition practice, the Mawashi-Geri serves as an effective attack technique. In contrast to Mae-Geri or Ushiro-Geri, it is not a direct technique, but it reaches its goal in a detour. Therefore, this kick is a good choice in competition, especially when trying to get around strong cover."
   },
   {
-    "title":"Yoko-Geri-Keage",
+    "title": "Yoko-Geri-Keage",
     "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683388196/Karate-Assets/Yoko-Geri-Keage_eyjtkh.jpg",
     "description": "Yoko geri keage is a snapping kick, so at the completion of the kick, vigorously snap the kicking foot back to the inside of the supporting left legs knee."
   },
   {
-    "title":"Yoko-Geri-Kekomi (Side Thrust-Kick))",
-    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683388343/Karate-Assets/kekomi_ogwssk.jpg",
+    "title": "Yoko-Geri-Kekomi (Side Thrust-Kick))",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683388343/Karate-Assets/kekomi_ogwssk.jpg",
     "description": "The yoko geri kekomi is a high karate kick, where you lift your leg in front of you and then thrust out the foot sideways. The opponent is hitten with the heel. The foot, the hips and the shoulders form a bow."
-
   },
   {
     "title": "Ushiro-Geri (Backward-Kick)",
-    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683389045/Karate-Assets/Ushiro-geri_hivfi0.jpg",
-    "description":"The Ushiro-Geri (後ろ蹴り) is a backward kick in Japanese martial arts. The Ushiro-Geri is used exclusively as an attack technique. The special difficulty of Ushiro leg techniques lies in the balance and the restricted view to the rear, which always requires a look over the shoulder. A perfect Ushiro-Geri is one of the strongest fighting techniques, against which there is also no block. The important thing here is the distance between the fighters. At short range, the Ushiro-Geri is not feasible. In competition, the Ushiro-Geri is always prepared by a narrower fighting position (kamae). A too wide and deep stance prevents a quick turn."
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683389045/Karate-Assets/Ushiro-geri_hivfi0.jpg",
+    "description": "The Ushiro-Geri (後ろ蹴り) is a backward kick in Japanese martial arts. The Ushiro-Geri is used exclusively as an attack technique. The special difficulty of Ushiro leg techniques lies in the balance and the restricted view to the rear, which always requires a look over the shoulder. A perfect Ushiro-Geri is one of the strongest fighting techniques, against which there is also no block. The important thing here is the distance between the fighters. At short range, the Ushiro-Geri is not feasible. In competition, the Ushiro-Geri is always prepared by a narrower fighting position (kamae). A too wide and deep stance prevents a quick turn."
+  },
+  {
+    "title": "Empi/ Enpi Uchi (Elbow Strike)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683399643/Karate-Assets/empi_fl9gcp.jpg",
+    "description": "In Karate, the word Empi/Enpi originated from the Chinese characters 猿臂 (which means “monkey elbow”). Elbow strikes are seen as close, wild, and dangerous like an ape beating down on its target. In Krav Maga for instance, martial arts students are often taught seven different elbow strikes (or elbows 1-7). These include elbow #1 – horizontal high elbow strike, elbow #2 – sideways elbow strike, elbow #3 – horizontal backward elbow strike, elbow #4- vertical backward low elbow strike, elbow #5 – vertical backward elbow strike (high target), elbow #6 – vertical forward & upward elbow strike and elbow #7 – vertical forward & down elbow strike."
+  },
+  {
+    "title": "Hiza-Ate (Knee Strike)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683399770/Karate-Assets/grounded-hiza-ganmen-geri_lpz6zd.webp",
+    "description": "With the knee can be both beaten and pushed. Impact surface is the kneecap. Knee techniques are primarily conducted against the inguinal canal, the hull sides, the solar plexus, the genitals and thighs. Knee techniques are very effective and dangerous. For all knee techniques the proper use of the hips is important. At the knee shock the hip is strongly shifted to the target; in contrast to the knee strike a very strong hip rotation is used. The standing leg is slightly bent. The knee is pushed with the near upper thigh tip into the target. At the knee shock the direction has no influence, it can be executed to the side or straight up, e.g. to frontward flexed opponents."
+  },
+  {
+    "title": "Shime-Waza (Strangling)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683401388/Karate-Assets/maxresdefault_zqakzu.jpg",
+    "description": "The objective of shime-waza is to render the opponent unconscious or when used in sport jujitsu, to render the opponent helpless. Pressure is applied to the neck to reduce circulation to the brain and also to cut off normal breathing. Interfering with brain circulation brings effects within a few seconds and is painless. Interfering with respiration is painful and brings effects in several minutes."
+  },
+  {
+    "title": "Deashi-Harai (Sweeps)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683402217/Karate-Assets/De-ashi-barai_g4rvha.jpg",
+    "description": "When standing it is a technique used to take an opponent to the ground by knocking their legs out from under them, so is classed as a throw or takedown. The force of the sweep either runs perpendicular to the opponent's leg or rises as it strikes the leg, lifting the foot from the ground. A sweep can be used to take the opponent to the ground or it can simply disrupt the opponent's balance long enough to make an opening for a punch or kick. In Japanese it is known as ashi-barai."
+  },
+  {
+    "title": "Kansetsu Waza (Joint Locks) ",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683402612/Karate-Assets/IMG_3062_xx5ldd.jpg",
+    "description": "Kansetsu waza consist of using one's own legs, arms, and knees, etc., to grasp the opponent's joint (elbow, knee, etc.), and bend it in the reverse direction to lock the joint, thereby rendering him virtually helpless."
+  },
+
+  {
+    "title": "Nukite (Finger Strikes)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683402752/Karate-Assets/Nukite-_-Spear-Hand-scaled-e1573804572588_p5wo98.webp",
+    "description": "The Spear Hand is formed with the open hand, the fingers closely joined and slightly bent inwards, the thumb forming a bridge, with the pad resting on the index finger. To be more effective, some Masters flex their middle finger slightly to match the length of the index and ring fingers."
+  },
+  {
+    "title": "Do Mawashi Kaiten Geri (Wheel Kick)",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683403260/Karate-Assets/3e5250_d431eefded6b40cc904143340b8008c7_mv2_d_1500_1228_s_2_xpupxl.jpg",
+    "description": "The reason this kick is so powerful and cause of sick knockouts is because it puts the user’s whole weight into a solid strike. The two main variations are the Front Roll (Tate Kaiten) and the Side Roll (Yoko Kaiten): The front roll is safer, makes you stand up while rolling and works like an Axe Kick. – The side roll is more risky and only a select few people are capable of doing it properly in the air. But is extremely powerful and acts almost like an overpowered Spinning Hook Kick."
   }
 ]
