@@ -14,7 +14,7 @@ const senseiSchema = new mongoose.Schema({
     required: true
   },
   ranking: {
-    type: Number,
+    type: String,
     required: true
   }
 });

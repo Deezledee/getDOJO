@@ -1,24 +1,34 @@
 const { Schema, model } = require("mongoose");
 
-const userSchema = new Schema(
-  {
-    email: {
-      type: String,
-      required: [true, 'Email is required.'],
-      unique: true,
-      lowercase: true,
-      trim: true
-    },
-    password: {
-      type: String,
-      required: [true, 'Password is required.']
-    }
+const userSchema = new Schema({
+  username: {
+    type: String,
+    required: true,
+    unique: true,
   },
-  {
-    // this second object adds extra properties: `createdAt` and `updatedAt`    
-    timestamps: true
-  }
-);
+  email: {
+    type: String,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  interests: [String],
+  about: String,
+  termsAccepted: {
+    type: Boolean,
+    default: false,
+  },
+  picture: {
+    type: String,
+    default:
+      "https://res.cloudinary.com/djzhnyobz/image/upload/v1683477630/Karate-Assets/cartoon-martial-arts_ztvol8.jpg",
+  },
+  profileCreated: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 const User = model("User", userSchema);
 

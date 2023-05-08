@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Bruce Lee",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683476135/Karate-Assets/Bruce_Lee_jtxkrp.png",
+    "about": "Bruce Lee is ranked first among the top 10 martial artists in the world in 2021. Lee Jun-fan (27 November 1940 - 20 July 1973) was a Chinese martial art performer, star, film maker, martial art teacher, and philosopher. He founded Jeet Kune Do, a fusion martial arts ideology that draws from various combat disciplines and is largely praised for laying the groundwork for modern mixed martial arts (MMA).",
+    "ranking": "Auto Didactic"
+  },
+  {
+    "title": "Chuck Norris",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683476388/Karate-Assets/Chuck_Norris_qh8wd7.jpg",
+    "about": "Carlos Ray (Chuck) Norris (born March 10, 1940) is an American martial artist and actor. He is a black belt in Tang Soo Do, Brazilian jiu jitsu and judo.[1] After serving in the United States Air Force, Norris won many martial arts championships and later founded his own discipline Chun Kuk Do. Shortly after, in Hollywood, Norris trained celebrities in martial arts.",
+    "ranking": "5th Dan"
+  },
+  {
+    "title": "Willie Nelson",
+    "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683476968/Karate-Assets/Willie-Nelson_l6v7gd.jpg",
+    "about": "Willie Hugh Nelson (born April 29, 1933) is an American singer, songwriter, musician, political activist, actor and martial artist. He was one of the main figures of outlaw country, a subgenre of country music that developed in the late 1960s as a reaction to the conservative restrictions of the Nashville sound. The critical success of his album Shotgun Willie (1973), combined with the critical and commercial success of Red Headed Stranger (1975) and Stardust (1978), made Nelson one of the most recognized artists in country music. Nelson has acted in over 30 films, co-authored several books, and has been involved in activism for the use of biofuels and the legalization of marijuana.",
+    "ranking": "5th Dan"
+  },
+  {
+    "title": "Jackie Chan",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683477768/Karate-Assets/Jackie_Chan_July_2016_lythzt.jpg",
+    "about":"Jackie Chan (born 7 April 1954, Chinese: 成龍) is a Hong Kong actor, filmmaker, martial artist, and stuntman known for his slapstick acrobatic fighting style, comic timing, and innovative stunts, which he typically performs himself. Chan has been acting since the 1960s, performing in more than 150 films. He is one of the most popular action film stars of all time. Chan is one of the most recognisable and influential film personalities in the world, with a widespread global following in both the Eastern and Western hemispheres. He has received fame stars on the Hong Kong Avenue of Stars and the Hollywood Walk of Fame.",
+    "ranking": "Black Belt"
+  }
+]
