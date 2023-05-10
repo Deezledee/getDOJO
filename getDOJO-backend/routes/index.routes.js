@@ -24,6 +24,7 @@ router.get("/martial-artists", (req, res, next) => {
     .catch((err) => res.json(err));
 });
 
+
 router.get("/random-chuck", (req, res, next) => {
   axios
     .get("https://api.chucknorris.io/jokes/random")
@@ -56,7 +57,6 @@ router.post("/create-profile-page/:id", (req, res, next) => {
     res.json("Please fill in all required fields and accept the terms.");
   }
 });
-
 
 
 module.exports = router;

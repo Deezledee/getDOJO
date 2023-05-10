@@ -10,10 +10,6 @@ const eventSchema = new Schema({
   date: Date,
   time: String,
   description: String,
-  pastEvent: {
-    type: Boolean,
-    default: false,
-  },
   maxParticipants: Number,
   participants: [
     {
