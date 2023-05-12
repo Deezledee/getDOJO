@@ -1,9 +1,15 @@
 [
   {
+    "title": "Jennifer Aniston",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683889977/Jennifer-Aniston_jeiccw.jpg",
+    "about":"Jennifer Joanna Aniston (born February 11, 1969) is an American actress and producer. She rose to international fame for her role as Rachel Green on the television sitcom Friends from 1994 to 2004, for which she earned Primetime Emmy, Golden Globe, and Screen Actors Guild awards. Since her career progressed in the 1990s, she has become one of the world's highest-paid actresses. Aniston practices Hatha yoga and Budokan karate.",
+    "ranking": "No ranking available"
+  },
+  {
     "title": "Bruce Lee",
     "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683476135/Karate-Assets/Bruce_Lee_jtxkrp.png",
     "about": "Bruce Lee is ranked first among the top 10 martial artists in the world in 2021. Lee Jun-fan (27 November 1940 - 20 July 1973) was a Chinese martial art performer, star, film maker, martial art teacher, and philosopher. He founded Jeet Kune Do, a fusion martial arts ideology that draws from various combat disciplines and is largely praised for laying the groundwork for modern mixed martial arts (MMA).",
-    "ranking": "Auto Didactic"
+    "ranking": "Auto didactic"
   },
   {
     "title": "Chuck Norris",
