@@ -72,8 +72,6 @@ router.post("/upload", fileUploader.single("image"), (req, res, next) => {
 });
  
 router.post('/techniques', (req, res, next) => {
- 
- 
   Technique.create(req.body)
     .then(createdUserImage => {
       res.status(200).json(createdUserImage);
@@ -82,12 +80,12 @@ router.post('/techniques', (req, res, next) => {
 });
 
 
-router.put("/techniques/:id", (req, res, next) => {
+router.put("/techniques/:techniqueId", (req, res, next) => {
   const { techniqueId } = req.params;
 
   console.log(techniqueId)
 
-  if (!mongoose.Types.TechniqueId.isValid(techniqueId)) {
+  if (!mongoose.Types.ObjectId.isValid(techniqueId)) {
     res.status(400).json({ message: "Specified id is not valid" });
     return;
   }
