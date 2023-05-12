@@ -1,4 +1,3 @@
-// index.routes.js
 
 const router = require("express").Router();
 const Technique = require("../models/Technique.model");
@@ -85,6 +84,8 @@ router.post('/techniques', (req, res, next) => {
 
 router.put("/techniques/:id", (req, res, next) => {
   const { techniqueId } = req.params;
+
+  console.log(techniqueId)
 
   if (!mongoose.Types.TechniqueId.isValid(techniqueId)) {
     res.status(400).json({ message: "Specified id is not valid" });
