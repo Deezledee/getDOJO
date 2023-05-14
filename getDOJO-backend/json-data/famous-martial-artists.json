@@ -14,7 +14,7 @@
   {
     "title": "Chuck Norris",
     "image": "https://res.cloudinary.com/djzhnyobz/image/upload/v1683476388/Karate-Assets/Chuck_Norris_qh8wd7.jpg",
-    "about": "Carlos Ray (Chuck) Norris (born March 10, 1940) is an American martial artist and actor. He is a black belt in Tang Soo Do, Brazilian jiu jitsu and judo.[1] After serving in the United States Air Force, Norris won many martial arts championships and later founded his own discipline Chun Kuk Do. Shortly after, in Hollywood, Norris trained celebrities in martial arts.",
+    "about": "Carlos Ray (Chuck) Norris (born March 10, 1940) is an American martial artist and actor. He is a black belt in Tang Soo Do, Brazilian jiu jitsu and judo. After serving in the United States Air Force, Norris won many martial arts championships and later founded his own discipline Chun Kuk Do. Shortly after, in Hollywood, Norris trained celebrities in martial arts.",
     "ranking": "5th Dan"
   },
   {
@@ -28,5 +28,77 @@
     "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1683477768/Karate-Assets/Jackie_Chan_July_2016_lythzt.jpg",
     "about":"Jackie Chan (born 7 April 1954, Chinese: 成龍) is a Hong Kong actor, filmmaker, martial artist, and stuntman known for his slapstick acrobatic fighting style, comic timing, and innovative stunts, which he typically performs himself. Chan has been acting since the 1960s, performing in more than 150 films. He is one of the most popular action film stars of all time. Chan is one of the most recognisable and influential film personalities in the world, with a widespread global following in both the Eastern and Western hemispheres. He has received fame stars on the Hong Kong Avenue of Stars and the Hollywood Walk of Fame.",
     "ranking": "Black Belt"
+  },
+  {
+    "title": "Robert Downey Jr",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684047330/Robert_Downey_Jr_n0yynq.jpg",
+    "about":"Robert John Downey Jr. (born April 4, 1965) is an American actor and producer. His career has been characterized by critical and popular success in his youth, followed by a period of substance abuse and legal troubles, before a resurgence of commercial success later in his career. In 2008, Downey was named by Time magazine among the 100 most influential people in the world, and from 2013 to 2015, he was listed by Forbes as Hollywood's highest-paid actor. He has been practicing Wing Chun (Kung Fu Style), which has helped him during his therapy process.",
+    "ranking": "No ranking available"
+  },
+  {
+    "title": "Matsumura Sokon",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684047761/Sokon_Matsumura_by5lcu.jpg",
+    "about":"Matsumura Sōkon (松村 宗棍) was one of the original Karate masters of Okinawa. Matsumura is credited with passing on the Shōrin-ryū Kempō-karate kata known as naihanchi I & II, passai, seisan, chintō, gojūshiho, kusanku (the embodiment of kusanku's teaching as passed on to Tode Sakugawa) and hakutsuru.",
+    "ranking": "Auto didactic"
+  },
+  {
+    "title": "Jessica Alba",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684048230/Jessica_Alba_ctpthg.jpg",
+    "about":"Jessica Marie Alba (/ˈælbə/ AL-bə; born April 28, 1981) is an American actress and businesswoman. She began her television and film appearances at age 13 in \"Camp Nowhere\" and \"The Secret World of Alex Mack\" (1994), and rose to prominence at age 19 as the lead actress of the television series \"Dark Angel\", for which she received a Golden Globe nomination. Jessica Alba has been a regular at Krav Maga Worldwide.",
+    "ranking": "No ranking available"
+  },
+  {
+    "title": "Barack Hussein Obama",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684048793/Barack_Obama_kpehzh.jpg",
+    "about":"Former U.S. President Barack Obama has practiced Taekwondo and earned a green belt. The president studied Taekwondo for four years from 2001-2005, when he was a junior senator in Illinois. In 2009 Obama was given an honorary black belt in taekwondo by South Korean President Lee Myung-Bak.",
+    "ranking": "6th Kyu"
+  },
+  {
+    "title": "Keanu Reeves",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684050114/KR_xz3gii.jpg",
+    "about":"Keanu Charles Reeves (/kiˈɑːnuː/ kee-AH-noo, born September 2, 1964) is a Canadian actor. Born in Beirut and raised in Toronto, Reeves began acting in theatre productions and in television films before making his feature film debut in \"Youngblood\" (1986). A veteran in the world of cinematic martial arts, Keanu Reeves has certainly earned his reputation as a Hollywood badass. First learning a variety of karate and kung-fu for The Matrix franchise, Reeves has continued his martial arts training over the years.",
+    "ranking": "Black Belt"
+  },
+  {
+    "title": "Jet Li",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684050695/Jet_Li_qxgakb.jpg",
+    "about":"Li Lianjie (courtesy name Yangzhong; born 26 April 1963), better known by his stage name Jet Li, is a Chinese film actor, film producer, martial artist, and retired Wushu champion. He is a naturalized Singaporean citizen. He is widely regarded as one of the most iconic Chinese film stars and one of the most renowned martial arts stars of his generation. Li proved to be a Wushu prodigy. He was crowned all-around youth champion in the national Wushu competition aged 11, and won the men's gold medal at the national championships five years in a row, before quitting the sport in his teens.",
+    "ranking": "Auto didactic"
+  },
+  {
+    "title": "Steven Seagal",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684050888/steven-seagal-us-schauspieler-100__v-gseapremiumxl_mlifqx.jpg",
+    "about":"Steven Seagal is ranked fifth on the list of the top ten martial artists in the world in 2021. Seagal was born in Lansing, Michigan. As an Aikido 7th-dan black belt, he started his adulthood as a martial arts instructor in Japan and became the nation's first expatriate to run an Aikido school. He eventually relocated to Los Angeles, California, where he worked in the same industry. Above the Law, Seagal's first film was released in 1988.",
+    "ranking": "7th Dan"
+  },
+  {
+    "title": "Wesley Snipes",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684051111/Wesleysnipes_cropped_2009_bsoklk.jpg",
+    "about":"Actor Wesley Snipes is a fifth dan black belt in Shotokan Karate and a second degree black belt in Hapkido. He also practices Kung Fu, Capoeira, Eskrima and Brazilian Jiu-Jitsu. Wesley Trent Snipes (born July 31, 1962) is an American actor, film producer, and martial artist. He is best known for his role as the Marvel Comics character Blade in the Blade film trilogy.",
+    "ranking": "5th Dan"
+  },
+  {
+    "title": "Jean-Claude Van Damme",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684051314/gettyimages-115137883_om1mwi.jpg",
+    "about":"This star is ranked seventh on the list of the best ten martial artists in the world in 2021. Jean-Claude Camille François Van Varenberg was born on 18 October 1960. This renowned star is a Belgium performer, director, fight choreographer, and former martial artist famed for his martial art action movies. Van Damme entered the National Center of Karate in Belgium only at the age of 12. This was under the guidance of Claude Goetz. Van Damme studied for four years and gained a berth on the Belgian Karate Squad. He then trained with Dominique Valera in comprehensive Karate and kickboxing.",
+    "ranking": "2nd Dan"
+  },
+  {
+    "title": "Donnie Yen",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684051564/Donnie-Yen_trklri.jpg",
+    "about":"Donnie Yen Ji-dan (Chinese: 甄子丹; born 27 July 1963) is a Hong Kong actor, martial artist, and action director. Regarded as one of Hong Kong's top action stars, Yen is widely credited for bringing mixed martial arts (MMA) into mainstream Asian cinema by choreographing MMA in many of his films since the early 2000s.",
+    "ranking": "6th Dan"
+  },
+  {
+    "title": "Gichin Funakoshi",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684051823/Sensei-Gichin-Funakoshi-779x1030_xoua5w.jpg",
+    "about":"Gichin Funakoshi (船越 義珍, Funakoshi Gichin, November 10, 1868 – April 26, 1957) was the founder of Shotokan Karate-Do, perhaps the most widely known style of Karate, and is known as a \"Father of Modern Karate\".",
+    "ranking": "10th Dan"
+  },
+  {
+    "title": "Masatoshi Nakayama",
+    "image":"https://res.cloudinary.com/djzhnyobz/image/upload/v1684051911/Masatoshi_Nakayama_d9bcrg.jpg",
+    "about":"Masatoshi Nakayama (中山 正敏, Nakayama Masatoshi, April 13, 1913 – April 15, 1987) was an internationally famous Japanese master of Shotokan karate. He helped establish the Japan Karate Association (JKA) in 1949, and wrote many textbooks on karate, which served to popularize his martial art. For almost 40 years, until his death in 1987, Nakayama worked to spread Shotokan Karate around the world. He was the first master in Shotokan history to attain the rank of 9th Dan while alive, and was posthumously awarded the rank of 10th Dan.",
+    "ranking": "10th Dan"
   }
 ]
