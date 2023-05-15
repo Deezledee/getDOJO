@@ -38,13 +38,12 @@ router.get("/random-chuck", (req, res, next) => {
 });
 
 router.post("/create-profile-page/:id", (req, res, next) => {
-  const { about, picture, termsAccepted } = req.body;
+  const { about, termsAccepted } = req.body;
   const {id} = req.params
-  
-  if (about && picture && termsAccepted, isAuthenticated) {
+  console.log("data ", req.body)
+  if (about && termsAccepted, isAuthenticated) {
     User.findByIdAndUpdate(id, {
       about,
-      picture,
       termsAccepted,
       profileCreated: true
     }, { new: true })
@@ -63,6 +62,15 @@ router.post("/create-profile-page/:id", (req, res, next) => {
 //Working with Cloudinary on the Techniques - Will try to implement it on the User model in case I have time left.
 
 router.post("/upload", fileUploader.single("image"), (req, res, next) => {
+ 
+  if (!req.file) {
+    next(new Error("No file uploaded!"));
+    return;
+  }
+  res.json({ fileUrl: req.file.path });
+});
+
+router.post("/upload", fileUploader.single("picture"), (req, res, next) => {
  
   if (!req.file) {
     next(new Error("No file uploaded!"));
