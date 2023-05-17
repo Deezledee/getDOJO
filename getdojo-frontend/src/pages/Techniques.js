@@ -14,7 +14,7 @@ function Techniques() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/techniques`)
+      .get(`${API_URL}/techniques`)
       .then((response) => {
         console.log("response.data", response.data);
         setTechniques(response.data);
@@ -30,7 +30,7 @@ function Techniques() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/techniques/${id}`)
+      .delete(`${API_URL}/techniques/${id}`)
       .then((response) => {
         console.log(response.data);
         setTechniques(techniques.filter((technique) => technique._id !== id));

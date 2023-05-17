@@ -11,7 +11,7 @@ function MartialArtists() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/martial-artists`)
+      .get(`${API_URL}/martial-artists`)
       .then((response) => {
         setMartialArtists(response.data);
       })
