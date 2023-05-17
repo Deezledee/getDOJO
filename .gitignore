@@ -1,0 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+getdojo-frontend/node_modules
+getdojo-frontend/.pnp
+getdojo-frontend/.pnp.js
+
+# testing
+getdojo-frontend/coverage
+
+# production
+getdojo-frontend/build
+
+# misc
+getdojo-frontend/.DS_Store
+getdojo-frontend/.env.local
+getdojo-frontend/.env.development.local
+getdojo-frontend/.env.test.local
+getdojo-frontend/.env.production.local
+
+getdojo-frontend/npm-debug.log*
+getdojo-frontend/yarn-debug.log*
+getdojo-frontend/yarn-error.log*
+
+
+
+
