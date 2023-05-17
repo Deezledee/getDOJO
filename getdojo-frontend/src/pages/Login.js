@@ -18,6 +18,9 @@ function Login(props) {
 
   const { storeToken, setIsLoading, setIsLoggedIn, setUser } = useContext(AuthContext);
 
+  const API_URL = process.env.REACT_APP_API_URL
+  console.log("api url ", API_URL)
+
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
@@ -34,7 +37,7 @@ function Login(props) {
         storeToken(response.data.authToken);
 
         const storedToken = localStorage.getItem("authToken");
-        axios.get(`${process.env.REACT_APP_API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}`} })
+        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}`} })
         .then((response) => {
           const user = response.data;
         // Update state variables        

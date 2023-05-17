@@ -10,10 +10,12 @@ function Techniques() {
   const [searchQuery, setSearchQuery] = useState("");
   const [like, setLike] = useState([]);
 
+  const API_URL = process.env.REACT_APP_API_URL
+
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/techniques`)
+      .get(`${API_URL}/api/techniques`)
       .then((response) => {
         console.log("response.data", response.data);
         setTechniques(response.data);
@@ -29,7 +31,7 @@ function Techniques() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/techniques/${id}`)
+      .delete(`${API_URL}/api/techniques/${id}`)
       .then((response) => {
         console.log(response.data);
         setTechniques(techniques.filter((technique) => technique._id !== id));

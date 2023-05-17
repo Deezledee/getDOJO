@@ -8,9 +8,11 @@ function MartialArtists() {
   const [martialArtists, setMartialArtists] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
+  const API_URL = process.env.REACT_APP_API_URL
+
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/martial-artists`)
+      .get(`${API_URL}/api/martial-artists`)
       .then((response) => {
         setMartialArtists(response.data);
       })
