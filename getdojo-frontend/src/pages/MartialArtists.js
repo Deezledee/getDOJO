@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-const API_URL = "http://localhost:5005/api";
 
 function MartialArtists() {
   const [martialArtists, setMartialArtists] = useState([]);
@@ -11,7 +10,7 @@ function MartialArtists() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/martial-artists`)
+      .get(`${process.env.REACT_APP_API_URL}/martial-artists`)
       .then((response) => {
         setMartialArtists(response.data);
       })

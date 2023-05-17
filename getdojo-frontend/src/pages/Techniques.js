@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import service from "../services/api.service";
 
-const API_URL = "http://localhost:5005/api";
 
 function Techniques() {
   const [techniques, setTechniques] = useState([]);
@@ -14,7 +13,7 @@ function Techniques() {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/techniques`)
+      .get(`${process.env.REACT_APP_API_URL}/techniques`)
       .then((response) => {
         console.log("response.data", response.data);
         setTechniques(response.data);
@@ -30,7 +29,7 @@ function Techniques() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`${API_URL}/techniques/${id}`)
+      .delete(`${process.env.REACT_APP_API_URL}/techniques/${id}`)
       .then((response) => {
         console.log(response.data);
         setTechniques(techniques.filter((technique) => technique._id !== id));

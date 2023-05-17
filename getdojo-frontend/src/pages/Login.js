@@ -6,7 +6,6 @@ import axios from "axios"
 import "../index.css";
 
 
-const API_URL = "http://localhost:5005"
 
 function Login(props) {
   const [email, setEmail] = useState("");
@@ -35,7 +34,7 @@ function Login(props) {
         storeToken(response.data.authToken);
 
         const storedToken = localStorage.getItem("authToken");
-        axios.get(`${API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}`} })
+        axios.get(`${process.env.REACT_APP_API_URL}/auth/verify`, { headers: { Authorization: `Bearer ${storedToken}`} })
         .then((response) => {
           const user = response.data;
         // Update state variables        
