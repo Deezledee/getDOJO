@@ -1,0 +1,1151 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 70vh;
+}
+
+.startPage {
+  background-image: url("./images/background-logo.gif");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  min-height: 100vh;
+  background-position: center;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.loginButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 280px;
+  margin-right: 100px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.signupButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  margin-right: 560px;
+  margin-left: 50px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.homePage {
+  background-image: url("./images/gi-background.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.RandomChuckNorrisJoke {
+  background-image: url("./images/chuck-norris.gif");
+  background-size: 100% auto;
+  min-height: 100vh;
+  background-position: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.cardChuck {
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  color: #ffffff;
+  background-color: #343736;
+  font-family: "Quicksand", sans-serif;
+  justify-content: left;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav button {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #447efb;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 0px 0px 10px #447efb;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+nav button:hover {
+  color: #ffffff;
+}
+
+.logoutButton {
+  position: absolute;
+  top: 9.6px;
+  right: 25px;
+  text-decoration: none;
+}
+
+.buttonChuck {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #447efb;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 0px 0px 10px #447efb;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 15%;
+  transform: translateX(-50%);
+}
+
+.buttonChuck:hover {
+  background-color: #447efb;
+  color: #343736;
+  text-shadow: 0px 0px 10px #343736;
+  font-family: "Quicksand", sans-serif;
+}
+
+.techniquesPage {
+  background-color: #343736;
+}
+
+.cardTechniques {
+  background-image: url("./images/gi-background.png");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Quicksand", sans-serif;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  width: 400px;
+  background-color: #343736;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 0px 0px 1px #447efb;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.likeButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 5px 18px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 26px;
+}
+.hereAreSome {
+  margin-top: 150px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  width: 90%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+  margin-left: 50px;
+  padding: 20px;
+}
+
+.martialArtistsLink {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0px 0px 1px #447efb;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.martialArtistsLink:hover {
+  color: #ebf0a7;
+}
+
+.nameMartialArtist {
+  color: #447efb;
+  font-size: 25px;
+}
+
+.ranking {
+  color: #dc368e;
+  font-size: 20px;
+}
+
+.stars {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.martialArtistsPage {
+  background-image: url("./images/gi-background.png");
+  min-height: 100vh;
+  background-size: 100% auto;
+  min-height: 100vh;
+  background-position: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.cardSignUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343736;
+}
+
+.Signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #343736;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.login-button {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signUpInput {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+.signUpLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.SignupThroughSignupButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 20px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.usernameLogOut {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  right: 8px;
+}
+
+.createProfilePage {
+  background-image: url("./images/karate-sky.jpg");
+  color: #000000;
+  min-height: 100vh;
+  background-size: 100% auto;
+  min-height: 100vh;
+  background-position: center;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.cardLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343736;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #343736;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+  margin: 40px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.loginInput {
+  font-family: "Quicksand", sans-serif;
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.loginLabel {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.signupButtonThroughLogin {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginButtonThroughLogin {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.chuck-norris-login {
+  border-radius: 30px;
+}
+
+.usernameTopScreen {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.privacyPolicy {
+  min-height: 100vh;
+  display: flex;
+  background-color: #343736;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #343736;
+  border-radius: 5px;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  background-size: cover;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  text-align: center;
+  font-size: 25px;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.privacyPolicyCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343736;
+  background-size: cover;
+  padding: 50px;
+}
+.listOfPolicies {
+  list-style: none;
+}
+
+.getDoJo {
+  font-size: 25px;
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+}
+
+.codedBy {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.containerCreateProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  min-width: 40vw;
+  border: 5px solid #ffffff;
+  margin-top: 30px;
+  margin-left: 50px;
+  padding-bottom: 60px;
+  background-color: #343736;
+  color: #447efb;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 20px;
+}
+
+.heyThere {
+  margin-top: 30px;
+  color: #447efb;
+  font-size: 35px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.userNameCreate {
+  color: #ebf0a7;
+  font-size: 35px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.userAboutMe {
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.aboutMeBox {
+  height: 100px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.formCreate {
+  display: flex;
+  flex-direction: column;
+}
+
+.termsAndConditionsLink {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0px 0px 1px #ffffff;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.termsAndConditionsLink:hover {
+  color: #ebf0a7;
+}
+
+.jackie-chan-signup {
+  border-radius: 30px;
+}
+
+.searchBarTechniques {
+  margin-top: 130px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 70px;
+  background-color: #000000;
+  border-radius: 20px;
+  color: #ebf0a7;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.techniquesLink {
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0px 0px 1px #447efb;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.techniquesLink:hover {
+  color: #ebf0a7;
+}
+
+.deleteTechniqueButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 5px 18px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.editTechniqueButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 5px 18px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.editAndDeleteButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.searchBarMartialArtists {
+  width: 400px;
+  height: 60px;
+  background-color: #000000;
+  border-radius: 20px;
+  color: #ebf0a7;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.youLostPage {
+  background-image: url("https://res.cloudinary.com/djzhnyobz/image/upload/v1684087318/Pngtree_cartoon_skull_vector_material_1655611_pbjfsc.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.chuck-norris-onions {
+  max-width: 400px;
+  border-radius: 50px;
+}
+
+.answer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
+}
+
+#picture {
+  display: none;
+}
+
+.uploadButton {
+  background-color: #343736;
+  text-shadow: 0px 0px 1px #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.uploadButton:hover {
+  background-color: #345eb5;
+  font-family: "Quicksand", sans-serif;
+}
+
+.saveChangesCreateButton {
+  background-color: #343736;
+  color: #ebf0a7;
+  text-shadow: 0px 0px 1px #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 20px;
+}
+
+.editTechniquePage {
+  background-image: url("./images/gi-background.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.editTechniqueCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.editTechniqueTitle {
+  font-size: 35px;
+  margin-top: 10px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+  padding: 10px;
+}
+
+.editTechniqueTitleBox {
+  background-color: #000000;
+  color: #ebf0a7;
+  font-size: 20px;
+  height: 30px;
+  width: 400px;
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.editTechniqueDescriptionBox {
+  background-color: #000000;
+  color: #ebf0a7;
+  font-size: 20px;
+  height: 100px;
+  width: 400px;
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.editTitle,
+.editDescription {
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #447efb;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  padding: 10px;
+}
+.updateTechniqueButton {
+  background-color: #343736;
+  color: #ebf0a7;
+  text-shadow: 0px 0px 1px #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 20px;
+}
+
+.quizPage {
+  background-image: url("./images/gi-background.png");
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.quizForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 8rem;
+  padding: 1rem;
+  border: 2px solid #ffffff;
+  width: 400px;
+  background-color: #343736;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: #ffffff;
+  text-shadow: 0px 0px 1px #ffffff;
+  width: 50%;
+}
+.question {
+  color: #447efb;
+  text-shadow: 0px 0px 1px #ffffff;
+  margin-top: 40px;
+}
+
+.submitQuizButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.congratsPage {
+  background-image: url("https://res.cloudinary.com/djzhnyobz/image/upload/v1683986090/glitterelephant_wjc1rc.gif");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
+
+.chuck-norris-congrats {
+  border-radius: 50px;
+  width: 500px;
+}
+
+.congrats {
+  font-size: 60px;
+  color: #447efb;
+  background-color: #343736;
+  text-shadow: 0px 0px 50px #ffffff;
+  border: 1px solid #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+}
+
+.returnToHomeCongrats {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.youLostTitle {
+  font-size: 60px;
+  color: #343736;
+  background-color: #5b3fbb;
+  text-shadow: 0px 0px 10px #ffffff;
+  border: 1px solid #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+}
+
+.youLostButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tryAgainButton {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.returnToHomeLost {
+  background-color: #343736;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 15px 30px;
+  text-shadow: 0px 0px 10px #ffffff;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.addTechnique {
+  background-image: url("./images/gi-background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343736;
+  background-size: cover;
+  height: 100vh;
+}
+
+.addTechniqueCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  margin-top: 240px;
+  margin-bottom: 140px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #343736;
+  color: #447efb;
+  border: 5px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #ffffff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.addTechniqueForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadButtonAddTechnique {
+  background-color: #343736;
+  text-shadow: 0px 0px 1px #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.uploadButtonAddTechnique:hover {
+  background-color: #345eb5;
+  font-family: "Quicksand", sans-serif;
+}
+
+.saveNewAddedTechnique {
+  background-color: #343736;
+  color: #ebf0a7;
+  text-shadow: 0px 0px 1px #ffffff;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 5px;
+}
+
+.titleAddTechnique {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.addYourOwn {
+  color: #447efb;
+  font-size: 35px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.descriptionAddTechnique {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 1.5px #ffffff;
+}
+
+.addTechniqueBox {
+  font-family: "Quicksand", sans-serif;
+  height: 100px;
+  width: 400px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #ebf0a7;
+  font-size: 20px;
+}
+
+.addTitleBox {
+  font-family: "Quicksand", sans-serif;
+  height: 30px;
+  width: 400px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #ebf0a7;
+  font-size: 20px;
+}
+
+.cardsFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneCardCreate {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondCardCreate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 33%;
+  right: 0;
+  transform: translate(-20%, -83%);
+  border: 5px solid #ffffff;
+  margin-top: 340px;
+  padding: 10px;
+  background-color: #343736;
+  color: #447efb;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 20px;
+}
+
+.newuserImage {
+  border-radius: 30px;
+}
+
+.imageTopScreen {
+  border-radius: 30px;
+}
+
+.postedForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userPictureOnNavbar {
+  border-radius: 30px;
+}
+
+.aboutMeChangeTitle {
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-size: 35px;
+  text-shadow: 0 0 1.5px #ffffff;
+  font-weight: lighter;
+}
+
+.aboutMeChangeDescription {
+  color: #447efb;
+  text-shadow: 0 0 1.5px #ffffff;
+  font-family: "Quicksand", sans-serif;
+
+
+}
