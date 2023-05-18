@@ -317,8 +317,8 @@ nav button:hover {
   padding: 20px;
   border: 1px solid #343736;
   border-radius: 5px;
-  max-width: 400px;
-  width: 100%;
+  max-width: 500px;
+  width: 30%;
   margin: 40px;
   font-family: "Quicksand", sans-serif;
   background-color: #343736;
@@ -405,7 +405,7 @@ nav button:hover {
   align-items: center;
   background-color: #343736;
   background-size: cover;
-  height: 100vh;
+  height: 20%;
 }
 
 .Login {
@@ -1124,6 +1124,7 @@ nav button:hover {
 
 .newuserImage {
   border-radius: 30px;
+  flex-shrink: 0;
 }
 
 .imageTopScreen {

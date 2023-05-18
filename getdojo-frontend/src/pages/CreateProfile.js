@@ -137,7 +137,7 @@ function CreateProfile() {
             <p className="aboutMeChangeDescription">{about}</p>
             <p>{isChecked}</p>
             {picture && (
-              <img className="newuserImage" src={picture} alt="" width="300" height="350" />
+              <img className="newuserImage" src={picture} alt="" width="200" />
             )}
           </div>
         </div>
