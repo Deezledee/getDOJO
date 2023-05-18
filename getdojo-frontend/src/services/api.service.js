@@ -12,7 +12,7 @@ const errorHandler = (err) => {
 };
 
 const getTechnique = (id) => {
-  return api.get(`/techniques/${id}`)
+  return api.get(`/api/techniques/${id}`)
   .then((res) => res.data)
     .catch(errorHandler);
 };
@@ -25,7 +25,7 @@ const uploadImage = (file) => {
 };
 
 const createTechnique = (newTechnique) => {
-  return api.post("/techniques", newTechnique)
+  return api.post("/api/techniques", newTechnique)
     .then(res => res.data)
     .catch(errorHandler);
 };
@@ -38,7 +38,7 @@ const createUserDetails = (newUserDetails) => {
 
 
 const updateTechnique = (id, requestBody) => {
-  return api.put(`/techniques/${id}`, requestBody)
+  return api.put(`/api/techniques/${id}`, requestBody)
   .then(res => res.data)
     .catch(errorHandler);
 };
