@@ -7,10 +7,12 @@ import axios from "axios";
 function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
   const [picture, setPicture] = useState("");
+  const API_URL = process.env.REACT_APP_API_URL
+
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/api/create-profile-page/${user._id}`)
+      .get(`${API_URL}/api/create-profile-page/${user._id}`)
       .then((response) => {
         setPicture(response.data.picture);
 

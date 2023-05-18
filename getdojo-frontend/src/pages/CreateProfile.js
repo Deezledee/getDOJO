@@ -10,12 +10,14 @@ function CreateProfile() {
   const [about, setAbout] = useState("");
   const [picture, setPicture] = useState("");
   const { user } = useContext(AuthContext);
+  const API_URL = process.env.REACT_APP_API_URL
+
 
   // const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/api/create-profile-page/${user._id}`)
+      .get(`${API_URL}/api/create-profile-page/${user._id}`)
       .then((response) => {
         setAbout(response.data.about);
         setPicture(response.data.picture);
@@ -55,7 +57,7 @@ function CreateProfile() {
     event.preventDefault();
 
     axios
-      .post(`http://localhost:5005/api/create-profile-page/${user._id}`, {
+      .post(`${API_URL}/api/create-profile-page/${user._id}`, {
         about: about,
         termsAccepted: isChecked,
         picture: picture,
