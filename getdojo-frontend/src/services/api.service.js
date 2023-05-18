@@ -19,7 +19,7 @@ const getTechnique = (id) => {
 
 const uploadImage = (file) => {
   console.log(file)
-  return api.post("/upload", file)
+  return api.post("/api/upload", file)
     .then(res => res.data)
     .catch(errorHandler);
 };
@@ -31,7 +31,7 @@ const createTechnique = (newTechnique) => {
 };
 
 const createUserDetails = (newUserDetails) => {
-  return api.put("/create-profile-page", newUserDetails)
+  return api.put("/api/create-profile-page", newUserDetails)
     .then(res => res.data)
     .catch(errorHandler);
 };
