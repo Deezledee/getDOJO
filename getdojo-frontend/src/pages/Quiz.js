@@ -174,7 +174,7 @@ function Quiz() {
     return (
       <div className="congratsPage">
         <h2 className="congrats">Congrats!</h2>
-        <img className="chuck-norris-congrats" src ="https://res.cloudinary.com/djzhnyobz/image/upload/v1683985209/Congrats-Chuck_kg5hbm.jpg" alt="chuck-norris-congrats"/>
+        <img className="chuck-norris-congrats" src ="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685371066/Congrats-Chuck_bsicb5.jpg" alt="chuck-norris-congrats"/>
         <button className="returnToHomeCongrats" onClick={() => window.location.href = "/home-page"}>Back to Home</button>
       </div>
     );
@@ -182,7 +182,7 @@ function Quiz() {
     return (
       <div className="youLostPage">
         <h2 className="youLostTitle">You lost!</h2>
-        <img className="chuck-norris-onions" src ="https://res.cloudinary.com/djzhnyobz/image/upload/v1683896269/59dec6cfd79ee9828f52a5984e59216b_sxayez.jpg" alt="chuck-norris-onions"/>
+        <img className="chuck-norris-onions" src ="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685370897/59dec6cfd79ee9828f52a5984e59216b_lqajq1.jpg" alt="chuck-norris-onions"/>
         <div className="youLostButtons">
         <button className="tryAgainButton" onClick={() => window.location.reload()}>Try again</button>
         <button className="returnToHomeLost" onClick={() => window.location.href = "/home-page"}>Back to Home</button>
