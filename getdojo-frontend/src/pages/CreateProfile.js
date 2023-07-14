@@ -13,8 +13,6 @@ function CreateProfile() {
   const API_URL = process.env.REACT_APP_API_URL
 
 
-  // const navigate = useNavigate();
-
   useEffect(() => {
     axios
       .get(`${API_URL}/api/create-profile-page/${user._id}`)
@@ -64,7 +62,6 @@ function CreateProfile() {
       })
       .then((response) => {
         window.location.reload();
-        // navigate("/create-profile-page");
       })
       .catch((error) => {
         console.log(error);

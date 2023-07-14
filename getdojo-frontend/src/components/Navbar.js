@@ -23,24 +23,13 @@ function Navbar() {
       });
   }, [user._id]); 
 
-  // useEffect(() => {
-  //   if (picture) {
-  //     const img = new Image();
-  //     img.src = picture;
-  //     img.onload = () => {
-  //       setPicture(picture);
-  //     };
-  //   }
-  // }, [picture]);
-
-
 
   return (
     <nav>
       {isLoggedIn && (
         <>
           <img
-            src="https://res.cloudinary.com/djzhnyobz/image/upload/v1684083423/getDOJO-logo_jwpitc.png"
+            src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1689337930/getdojo-logo_xqikq7.png"
             alt="getDOJO-logo"
             className="getDOJO-logo"
             width={85}

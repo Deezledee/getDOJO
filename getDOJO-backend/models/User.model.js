@@ -24,7 +24,7 @@ const userSchema = new Schema({
   picture: {
     type: String,
     default:
-      "https://res.cloudinary.com/djzhnyobz/image/upload/v1684081363/karate-gallery/tz70lr2l35bttpa7w8wm.jpg",
+      "https://res.cloudinary.com/iujg6ghfdf/image/upload/v1689337572/cartoon-martial-arts_oud1rp.jpg",
   },
   profileCreated: {
     type: Boolean,
