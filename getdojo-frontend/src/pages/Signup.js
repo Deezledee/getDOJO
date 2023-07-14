@@ -78,7 +78,7 @@ function Signup(props) {
           Login
         </button>
       </div>
-      <img src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1689279691/7n_shanghaidawnishappening00_fggjye.jpg" alt="jackie-chan-signup" className="jackie-chan-signup"/>
+      <img src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1689279691/7n_shanghaidawnishappening00_fggjye.jpg" alt="jackie-chan-signup" className="jackie-chan-signup" width="400"/>
     </div>
   );
 }
