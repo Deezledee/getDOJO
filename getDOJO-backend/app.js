@@ -15,8 +15,11 @@ const { isAuthenticated } = require("./middleware/jwt.middleware");
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 const app = express();
 
-// Enable CORS
-app.use(cors());
+// Enable CORS with specific origin
+app.use(cors({
+  origin: 'https://getdojo.netlify.app', // replace with your client's origin
+  credentials: true
+}));
 
 require("./config")(app);
 
