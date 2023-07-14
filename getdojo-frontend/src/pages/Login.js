@@ -81,7 +81,7 @@ function Login(props) {
           Sign up
         </button>
     </div>
-    <img src="https://res.cloudinary.com/djzhnyobz/image/upload/v1683748476/chuck-norris2_kuq28z.jpg" alt="chuck-norris-login" className="chuck-norris-login"/>
+    <img src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1689324688/chucknorris1_rbskqk.jpg" alt="chuck-norris-login" className="chuck-norris-login" width="700"/>
 
     </div>
 
