@@ -21,6 +21,9 @@ app.use(cors({
   credentials: true
 }));
 
+app.options('*', cors());
+
+
 require("./config")(app);
 
 // 👇 Start handling routes here
