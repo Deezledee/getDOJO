@@ -26,7 +26,9 @@ function Signup(props) {
         navigate("/login");
       })
       .catch((error) => {
-        const errorDescription = error.response.data.message;
+        const errorDescription =
+          error?.response?.data?.message ||
+          "Signup failed. Please try again.";
         setErrorMessage(errorDescription);
       });
   };

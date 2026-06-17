@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
+const mongoose = require("mongoose");
 const User = require("../models/User.model");
 
 const { isAuthenticated } = require('./../middleware/jwt.middleware.js');
@@ -10,18 +11,20 @@ const saltRounds = 10;
 
 
 // POST /auth/signup  - Creates a new user in the database
-router.post('/signup', (req, res, next) => {
+router.post('/signup', async (req, res, next) => {
   const { email, password, name } = req.body;
+  const normalizedEmail = (email || '').trim().toLowerCase();
+  const normalizedName = (name || '').trim();
 
   // Check if email or password or name are provided as empty string 
-  if (email === '' || password === '' || name === '') {
+  if (!normalizedEmail || !password || !normalizedName) {
     res.status(400).json({ message: "Provide email, password and name" });
     return;
   }
 
   // Use regex to validate the email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  if (!emailRegex.test(email)) {
+  if (!emailRegex.test(normalizedEmail)) {
     res.status(400).json({ message: 'Provide a valid email address.' });
     return;
   }
@@ -34,39 +37,62 @@ router.post('/signup', (req, res, next) => {
   }
 
 
-  // Check the users collection if a user with the same email already exists
-  User.findOne({ email })
-    .then((foundUser) => {
-      // If the user with the same email already exists, send an error response
-      if (foundUser) {
-        res.status(400).json({ message: "User already exists." });
-        return;
-      }
+  try {
+    // Avoid long DB operation timeouts when Atlas is paused/resuming or unreachable.
+    if (mongoose.connection.readyState !== 1) {
+      return res.status(503).json({
+        message: "Database temporarily unavailable. Please try again in a moment."
+      });
+    }
 
-      // If email is unique, proceed to hash the password
-      const salt = bcrypt.genSaltSync(saltRounds);
-      const hashedPassword = bcrypt.hashSync(password, salt);
+    // Check the users collection if a user with the same email already exists
+    const foundUser = await User.findOne({ email: normalizedEmail });
 
-      // Create the new user in the database
-      // We return a pending promise, which allows us to chain another `then` 
-      return User.create({ email, password: hashedPassword, name });
-    })
-    .then((createdUser) => {
-      // Deconstruct the newly created user object to omit the password
-      // We should never expose passwords publicly
-      const { email, name, _id } = createdUser;
-    
-      // Create a new object that doesn't expose the password
-      const user = { email, name, _id };
+    // If the user with the same email already exists, send an error response
+    if (foundUser) {
+      return res.status(400).json({ message: "User already exists." });
+    }
 
-      // Send a json response containing the user object
-      res.status(201).json({ user: user });
+    // If email is unique, proceed to hash the password
+    const salt = bcrypt.genSaltSync(saltRounds);
+    const hashedPassword = bcrypt.hashSync(password, salt);
 
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json({ message: "Internal Server Error" })
+    // Create the new user in the database
+    const createdUser = await User.create({ email: normalizedEmail, password: hashedPassword, name: normalizedName });
+
+    // Deconstruct the newly created user object to omit the password
+    // We should never expose passwords publicly
+    const { _id } = createdUser;
+
+    // Create a new object that doesn't expose the password
+    const user = { email: normalizedEmail, name: normalizedName, _id };
+
+    // Send a json response containing the user object
+    return res.status(201).json({ user: user });
+  } catch (err) {
+    console.error("Signup error:", {
+      name: err?.name,
+      code: err?.code,
+      message: err?.message,
+      keyPattern: err?.keyPattern,
+      keyValue: err?.keyValue,
     });
+
+    if (err?.code === 11000 && err?.keyPattern?.email) {
+      return res.status(400).json({ message: "User already exists." });
+    }
+
+    if (err?.name === "ValidationError") {
+      return res.status(400).json({ message: err.message });
+    }
+
+    // Mongo authorization error (e.g. db user has read-only role).
+    if (err?.code === 13) {
+      return res.status(503).json({ message: "Database permissions error. Check Atlas database user roles." });
+    }
+
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 
