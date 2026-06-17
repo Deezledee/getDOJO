@@ -1,7 +1,6 @@
 // ℹ️ Gets access to environment variables/settings
 // https://www.npmjs.com/package/dotenv
 require("dotenv").config();
-const cors = require('cors');
 
 // ℹ️ Connects to the database
 require("./db");
@@ -14,14 +13,6 @@ const { isAuthenticated } = require("./middleware/jwt.middleware");
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 const app = express();
-
-// Enable CORS with specific origin
-app.use(cors({
-  origin: 'https://getdojo.netlify.app', // replace with your client's origin
-  credentials: true
-}));
-
-app.options('*', cors());
 
 
 require("./config")(app);

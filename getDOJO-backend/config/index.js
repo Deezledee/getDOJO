@@ -15,6 +15,24 @@ const cors = require("cors");
 
 const FRONTEND_URL = process.env.ORIGIN || "http://localhost:3000";
 
+const ALLOWED_ORIGINS = [
+  FRONTEND_URL,
+  "https://getdojo.netlify.app",
+  "http://localhost:3000",
+  "http://localhost:5173",
+];
+
+const isAllowedOrigin = (origin) => {
+  if (!origin) return true;
+
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    return true;
+  }
+
+  // Allow Netlify preview and branch deploy domains.
+  return /https:\/\/[a-z0-9-]+--getdojo\.netlify\.app$/i.test(origin);
+};
+
 // Middleware configuration
 module.exports = (app) => {
   // Because this is a server that will accept requests from outside and it will be hosted ona server with a `proxy`, express needs to know that it should trust that setting.
@@ -24,7 +42,15 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: [FRONTEND_URL]
+      origin: (origin, callback) => {
+        if (isAllowedOrigin(origin)) {
+          callback(null, true);
+          return;
+        }
+
+        callback(new Error(`CORS blocked for origin: ${origin}`));
+      },
+      credentials: true,
     })
   );
 
