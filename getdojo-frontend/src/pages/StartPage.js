@@ -2,11 +2,56 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../index.css';
 import { Box, Button, Stack, Typography } from '@mui/material';
+import backgroundImage from '../images/background-logo.gif';
 
 function StartPage() {
   return (
-    <div className='startPage'>
-      <Box sx={{ textAlign: 'center', maxWidth: 760, px: 2 }}>
+    <Box
+      className='startPage'
+      sx={{
+        position: 'relative',
+        minHeight: '100vh',
+        overflow: 'hidden',
+        display: 'grid',
+        placeItems: 'center',
+        px: 2,
+      }}
+    >
+      <Box
+        aria-hidden
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transform: 'scale(1.03)',
+        }}
+      />
+      <Box
+        aria-hidden
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          background:
+            'linear-gradient(180deg, rgba(2, 6, 23, 0.52) 0%, rgba(15, 23, 42, 0.6) 45%, rgba(30, 41, 59, 0.68) 100%)',
+        }}
+      />
+
+      <Box
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+          textAlign: 'center',
+          maxWidth: 760,
+          px: 2,
+          py: { xs: 3, md: 4 },
+          borderRadius: 3,
+          background: 'rgba(255,255,255,0.8)',
+          border: '1px solid rgba(255,255,255,0.75)',
+          backdropFilter: 'blur(6px)',
+        }}
+      >
         <Typography variant="h3" sx={{ fontWeight: 900, color: '#0f172a', mb: 1.5 }}>
           Welcome to getDOJO
         </Typography>
@@ -18,12 +63,18 @@ function StartPage() {
           <Button component={Link} to="/signup" variant="contained" size="large">
             Sign Up
           </Button>
-          <Button component={Link} to="/login" variant="outlined" size="large">
+          <Button
+            component={Link}
+            to="/login"
+            variant="outlined"
+            size="large"
+            sx={{ backgroundColor: 'rgba(255,255,255,0.9)' }}
+          >
             Login
           </Button>
         </Stack>
       </Box>
-    </div>
+    </Box>
   );
 };
 
