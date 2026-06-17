@@ -24,8 +24,7 @@ function StartPage() {
           inset: 0,
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          transform: 'scale(1.03)',
+          backgroundPosition: { xs: '56% center', md: '64% center' },
         }}
       />
       <Box
@@ -34,7 +33,7 @@ function StartPage() {
           position: 'absolute',
           inset: 0,
           background:
-            'linear-gradient(180deg, rgba(2, 6, 23, 0.52) 0%, rgba(15, 23, 42, 0.6) 45%, rgba(30, 41, 59, 0.68) 100%)',
+            'linear-gradient(180deg, rgba(2, 6, 23, 0.34) 0%, rgba(15, 23, 42, 0.44) 45%, rgba(30, 41, 59, 0.52) 100%)',
         }}
       />
 
@@ -43,13 +42,13 @@ function StartPage() {
           position: 'relative',
           zIndex: 1,
           textAlign: 'center',
-          maxWidth: 760,
+          width: 'min(92vw, 700px)',
           px: 2,
           py: { xs: 3, md: 4 },
           borderRadius: 3,
-          background: 'rgba(255,255,255,0.8)',
+          background: 'rgba(255,255,255,0.74)',
           border: '1px solid rgba(255,255,255,0.75)',
-          backdropFilter: 'blur(6px)',
+          backdropFilter: 'blur(4px)',
         }}
       >
         <Typography variant="h3" sx={{ fontWeight: 900, color: '#0f172a', mb: 1.5 }}>
