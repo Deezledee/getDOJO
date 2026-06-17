@@ -362,13 +362,10 @@ nav button:hover {
 }
 
 .createProfilePage {
-  background:
-    radial-gradient(circle at 10% 10%, rgba(60, 130, 246, 0.15), transparent 45%),
-    radial-gradient(circle at 90% 20%, rgba(16, 185, 129, 0.12), transparent 42%),
-    linear-gradient(180deg, #f6f9ff 0%, #edf3fb 100%);
+  background-image: url("./images/karate-sky.jpg");
   color: #000000;
   min-height: 100vh;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
   margin: 0;
   font-family: "Quicksand", sans-serif;
@@ -966,24 +963,6 @@ nav button:hover {
   }
 }
 
-/* Remove image watermark-style backgrounds and use a consistent modern surface */
-.startPage,
-.homePage,
-.RandomChuckNorrisJoke,
-.martialArtistsPage,
-.cardTechniques,
-.editTechniquePage,
-.quizPage,
-.addTechnique,
-.congratsPage,
-.youLostPage {
-  background-image: none !important;
-  background:
-    radial-gradient(circle at 12% 15%, rgba(56, 189, 248, 0.16), transparent 40%),
-    radial-gradient(circle at 84% 20%, rgba(34, 197, 94, 0.12), transparent 40%),
-    linear-gradient(180deg, #f8fbff 0%, #ecf3fb 100%) !important;
-}
-
 /* Responsive polish for small screens */
 @media (max-width: 900px) {
   .cardSignUp,
@@ -1226,18 +1205,8 @@ nav button:hover {
 }
 
 .startPage,
-.homePage,
-.RandomChuckNorrisJoke,
-.techniquesPage,
-.cardTechniques,
-.martialArtistsPage,
 .privacyPolicy,
 .privacyPolicyCard,
-.addTechnique,
-.editTechniquePage,
-.quizPage,
-.congratsPage,
-.youLostPage,
 .techniqueDetails {
   background: var(--dojo-bg) !important;
   color: var(--dojo-text);
