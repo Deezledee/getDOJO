@@ -38,7 +38,7 @@ router.get("/random-chuck", (req, res, next) => {
 });
 
 router.get("/create-profile-page/:id", (req, res, next) => {
-  User.findById(req.params.id)
+  User.findById(req.params.id).select("-password")
     .then((user) => {
       if (!user) {
         return res.status(404).json({ error: "User not found" });
@@ -51,25 +51,40 @@ router.get("/create-profile-page/:id", (req, res, next) => {
 
 router.post("/create-profile-page/:id", (req, res, next) => {
   const { about, termsAccepted, picture } = req.body;
-  const {id} = req.params
-  console.log("data ", req.body)
-  if (about && termsAccepted && picture, isAuthenticated) {
-    User.findByIdAndUpdate(id, {
-      about,
-      termsAccepted,
-      picture,
-      profileCreated: true
-    }, { new: true })
-      .then((user) => {
-        user.password = ""
-        res.json( { user });
-      })
-      .catch((err) => {
-        res.json(err);
-      });
-  } else {
-    res.json("Please fill in all required fields and accept the terms.");
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ message: "Specified id is not valid" });
   }
+
+  const updatePayload = {
+    profileCreated: true,
+  };
+
+  if (typeof about === "string") {
+    updatePayload.about = about;
+  }
+
+  if (typeof termsAccepted === "boolean") {
+    updatePayload.termsAccepted = termsAccepted;
+  }
+
+  if (typeof picture === "string" && picture.trim()) {
+    updatePayload.picture = picture;
+  }
+
+  User.findByIdAndUpdate(id, { $set: updatePayload }, { new: true, runValidators: true })
+    .select("-password")
+    .then((user) => {
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+
+      return res.status(200).json({ user });
+    })
+    .catch((err) => {
+      return res.status(500).json({ message: err.message });
+    });
 });
 
 //Working with Cloudinary on the Techniques - Will try to implement it on the User model in case I have time left.

@@ -1,10 +1,11 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import service from "../services/api.service";
 import {
+  Alert,
   Avatar,
   Box,
   Button,
@@ -28,9 +29,14 @@ function CreateProfile() {
   const [isChecked, setIsChecked] = useState(false);
   const [about, setAbout] = useState("");
   const [picture, setPicture] = useState("");
+  const [saveMessage, setSaveMessage] = useState("");
+  const [saveError, setSaveError] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
   const { user } = useContext(AuthContext);
   const API_URL = process.env.REACT_APP_API_URL;
   const userInitial = (user?.name || "G").charAt(0).toUpperCase();
+  const initializedRef = useRef(false);
+  const autoSaveTimeoutRef = useRef(null);
 
   useEffect(() => {
     if (!user?._id || !API_URL) {
@@ -40,9 +46,10 @@ function CreateProfile() {
     axios
       .get(`${API_URL}/api/create-profile-page/${user._id}`)
       .then((response) => {
-        setAbout(response.data.about);
-        setPicture(response.data.picture);
-        setIsChecked(response.data.termsAccepted);
+        setAbout(response.data.about || "");
+        setPicture(response.data.picture || "");
+        setIsChecked(Boolean(response.data.termsAccepted));
+        initializedRef.current = true;
 
         console.log(response.data);
       })
@@ -50,6 +57,14 @@ function CreateProfile() {
         console.log(error);
       });
   }, [API_URL, user?._id]);
+
+  useEffect(() => {
+    return () => {
+      if (autoSaveTimeoutRef.current) {
+        clearTimeout(autoSaveTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -74,13 +89,16 @@ function CreateProfile() {
       .catch((err) => console.log("Error while uploading the file: ", err));
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const saveProfile = useCallback((showSavedMessage = true) => {
+    setSaveMessage("");
+    setSaveError("");
 
     if (!API_URL || !user?._id) {
-      alert("Server URL is missing. Please refresh and try again.");
+      setSaveError("Server URL is missing. Please refresh and try again.");
       return;
     }
+
+    setIsSaving(true);
 
     axios
       .post(`${API_URL}/api/create-profile-page/${user._id}`, {
@@ -89,12 +107,45 @@ function CreateProfile() {
         picture: picture,
       })
       .then((response) => {
+        if (response?.data?.user) {
+          setAbout(response.data.user.about || "");
+          setPicture(response.data.user.picture || "");
+          setIsChecked(Boolean(response.data.user.termsAccepted));
+        }
+        if (showSavedMessage) {
+          setSaveMessage("Profile saved.");
+        } else {
+          setSaveMessage("Saved automatically.");
+        }
         console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
-        alert("Error updating details.");
+        const message = error?.response?.data?.message || "Error updating details.";
+        setSaveError(message);
+      })
+      .finally(() => {
+        setIsSaving(false);
       });
+  }, [API_URL, about, isChecked, picture, user?._id]);
+
+  useEffect(() => {
+    if (!initializedRef.current || !API_URL || !user?._id) {
+      return;
+    }
+
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current);
+    }
+
+    autoSaveTimeoutRef.current = setTimeout(() => {
+      saveProfile(false);
+    }, 900);
+  }, [API_URL, about, isChecked, picture, saveProfile, user?._id]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    saveProfile(true);
   };
 
   if (!user) {
@@ -176,6 +227,9 @@ function CreateProfile() {
                     placeholder="Tell your story..."
                   />
 
+                  {saveMessage && <Alert severity="success" sx={{ mt: 2 }}>{saveMessage}</Alert>}
+                  {saveError && <Alert severity="error" sx={{ mt: 2 }}>{saveError}</Alert>}
+
                   <Stack spacing={1.2} sx={{ mt: 2 }}>
                     <FormControlLabel
                       control={<Checkbox checked={isChecked} onChange={handleCheckboxChange} />}
@@ -203,6 +257,7 @@ function CreateProfile() {
                       <Button
                         type="submit"
                         variant="contained"
+                        disabled={isSaving}
                         sx={{
                           borderRadius: 2,
                           textTransform: "none",
@@ -210,7 +265,7 @@ function CreateProfile() {
                           background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
                         }}
                       >
-                        Save Changes
+                        {isSaving ? "Saving..." : "Save Changes"}
                       </Button>
                     </Stack>
                   </Stack>
@@ -248,7 +303,15 @@ function CreateProfile() {
 
                   <Typography
                     variant="body2"
-                    sx={{ color: "#374151", textAlign: "center", width: "100%", maxWidth: 360 }}
+                    sx={{
+                      color: "#374151",
+                      textAlign: "center",
+                      width: "100%",
+                      maxWidth: 360,
+                      whiteSpace: "pre-wrap",
+                      overflowWrap: "anywhere",
+                      wordBreak: "break-word",
+                    }}
                   >
                     {about || "Your profile text will appear here as you type."}
                   </Typography>
