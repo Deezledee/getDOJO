@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProviderWrapper } from './context/auth.context';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import getdojoTheme from './theme/getdojoTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AuthProviderWrapper>
-    <App />
-    </ AuthProviderWrapper>
+    <ThemeProvider theme={getdojoTheme}>
+      <CssBaseline />
+      <AuthProviderWrapper>
+        <App />
+      </AuthProviderWrapper>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

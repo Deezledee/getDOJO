@@ -1,10 +1,23 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Container,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Radio,
+  RadioGroup,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 function Quiz() {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
   const questions = [
     {
       id: 1,
@@ -160,7 +173,6 @@ function Quiz() {
     if (correct === questions.length) {
       // All answers are correct
       setSubmitted(true);
-      setCorrectAnswers(correct);
     } else {
       setSubmitted("lost");
     }
@@ -172,52 +184,86 @@ function Quiz() {
 
   if (submitted === true) {
     return (
-      <div className="congratsPage">
-        <h2 className="congrats">Congrats!</h2>
-        <img className="chuck-norris-congrats" src ="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685371066/Congrats-Chuck_bsicb5.jpg" alt="chuck-norris-congrats"/>
-        <button className="returnToHomeCongrats" onClick={() => window.location.href = "/home-page"}>Back to Home</button>
-      </div>
+      <Box className="congratsPage" sx={{ minHeight: "100vh", py: 6, display: "grid", placeItems: "center" }}>
+        <Card sx={{ width: "min(92vw, 720px)", textAlign: "center", borderRadius: 3 }}>
+          <CardContent>
+            <Typography variant="h3" sx={{ fontWeight: 900, mb: 2 }}>
+              Congrats!
+            </Typography>
+            <Box component="img" className="chuck-norris-congrats" src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685371066/Congrats-Chuck_bsicb5.jpg" alt="chuck-norris-congrats" sx={{ width: "100%", maxWidth: 520, borderRadius: 3 }} />
+            <Stack alignItems="center" sx={{ mt: 2.3 }}>
+              <Button variant="contained" onClick={() => { window.location.href = "/home-page"; }}>
+                Back to Home
+              </Button>
+            </Stack>
+          </CardContent>
+        </Card>
+      </Box>
     );
   } else if (submitted === "lost") {
     return (
-      <div className="youLostPage">
-        <h2 className="youLostTitle">You lost!</h2>
-        <img className="chuck-norris-onions" src ="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685370897/59dec6cfd79ee9828f52a5984e59216b_lqajq1.jpg" alt="chuck-norris-onions"/>
-        <div className="youLostButtons">
-        <button className="tryAgainButton" onClick={() => window.location.reload()}>Try again</button>
-        <button className="returnToHomeLost" onClick={() => window.location.href = "/home-page"}>Back to Home</button>
-      </div>
-      </div>
+      <Box className="youLostPage" sx={{ minHeight: "100vh", py: 6, display: "grid", placeItems: "center" }}>
+        <Card sx={{ width: "min(92vw, 720px)", textAlign: "center", borderRadius: 3 }}>
+          <CardContent>
+            <Typography variant="h3" sx={{ fontWeight: 900, mb: 2 }}>
+              You lost!
+            </Typography>
+            <Box component="img" className="chuck-norris-onions" src="https://res.cloudinary.com/iujg6ghfdf/image/upload/v1685370897/59dec6cfd79ee9828f52a5984e59216b_lqajq1.jpg" alt="chuck-norris-onions" sx={{ width: "100%", maxWidth: 400, borderRadius: 3 }} />
+            <Stack direction={{ xs: "column", sm: "row" }} justifyContent="center" spacing={1.2} sx={{ mt: 2.4 }}>
+              <Button variant="contained" onClick={() => window.location.reload()}>
+                Try again
+              </Button>
+              <Button variant="outlined" onClick={() => { window.location.href = "/home-page"; }}>
+                Back to Home
+              </Button>
+            </Stack>
+          </CardContent>
+        </Card>
+      </Box>
     );
   }
 
   return (
-    <div className="quizPage">
-      <Navbar/>
-    <form className="quizForm" onSubmit={handleSubmit}>
-      {questions.map((q) => (
-        <div key={q.id}>
-          <h3 className="question">{q.question} 🤔</h3>
-          {q.options.map((option) => (
-            <div key={option}>
-              <label>
-                <input className="answer"
-                  type="radio"
-                  name={q.id}
-                  value={option}
-                  checked={answers[q.id] === option}
-                  onChange={(e) => handleAnswerChange(q.id, e.target.value)}
-                />
-                {option}
-              </label>
-            </div>
-          ))}
-        </div>
-      ))}
-      <button className="submitQuizButton" type="submit">Submit 🥊</button>
+    <Box className="quizPage" sx={{ minHeight: "100vh" }}>
+      <Navbar />
+      <Container maxWidth="md" sx={{ pt: 13, pb: 5 }}>
+        <Card sx={{ borderRadius: 3 }}>
+          <CardContent>
+            <Typography variant="h4" sx={{ fontWeight: 900, mb: 2 }}>
+              Dojo Quiz
+            </Typography>
+            <Box component="form" onSubmit={handleSubmit}>
+              <Stack spacing={2}>
+                {questions.map((q) => (
+                  <Card key={q.id} variant="outlined" sx={{ borderRadius: 2 }}>
+                    <CardContent>
+                      <FormControl fullWidth>
+                        <FormLabel sx={{ fontWeight: 700, color: "#0f172a", mb: 1 }}>{q.question}</FormLabel>
+                        <RadioGroup
+                          name={String(q.id)}
+                          value={answers[q.id] || ""}
+                          onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+                        >
+                          {q.options.map((option) => (
+                            <FormControlLabel key={option} value={option} control={<Radio />} label={option} />
+                          ))}
+                        </RadioGroup>
+                      </FormControl>
+                    </CardContent>
+                  </Card>
+                ))}
 
-    </form>
-    </div>
+                <Stack alignItems="center" sx={{ pt: 1 }}>
+                  <Button type="submit" variant="contained" size="large">
+                    Submit
+                  </Button>
+                </Stack>
+              </Stack>
+            </Box>
+          </CardContent>
+        </Card>
+      </Container>
+    </Box>
   );
 }
 

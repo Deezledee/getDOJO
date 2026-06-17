@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link, useParams } from "react-router-dom";
 import service from "../services/api.service";
 import EditTechnique from "./EditTechnique";
+import Navbar from "../components/Navbar";
+import { Box, Button, Card, CardContent, Container, Stack, Typography } from "@mui/material";
 
 
 
@@ -13,7 +15,7 @@ function TechniqueDetailsPage (props) {
 
   
   
-  const getTechnique = () => {
+  const getTechnique = useCallback(() => {
 
     
 
@@ -23,36 +25,45 @@ function TechniqueDetailsPage (props) {
         setTechnique(oneTechnique);
       })
       .catch((error) => console.log(error));
-  };
+  }, [techniqueId]);
   
   
   useEffect(()=> {
     getTechnique();
-  }, [] );
+  }, [getTechnique] );
 
   
   return (
-    <div className="techniqueDetails">
-      {technique && (
-        <>
-          <h1>{technique.title}</h1>
-          <p>{technique.description}</p>
-        </>
-      )}
+    <Box className="techniqueDetails">
+      <Navbar />
+      <Container maxWidth="md">
+        <Card elevation={0} sx={{ borderRadius: 3 }}>
+          <CardContent>
+            {technique && (
+              <>
+                <Typography variant="h4" sx={{ fontWeight: 800, mb: 1.2 }}>
+                  {technique.title}
+                </Typography>
+                <Typography variant="body1" sx={{ color: "#475569", mb: 2 }}>
+                  {technique.description}
+                </Typography>
+              </>
+            )}
 
-      
-      <EditTechnique refreshTechnique={getTechnique} techniqueId={techniqueId} />          
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={1.2} sx={{ mb: 1.8 }}>
+              <Button component={Link} to="/techniques" variant="contained">
+                Back to Techniques
+              </Button>
+              <Button component={Link} to={`/techniques/edit/${techniqueId}`} variant="outlined">
+                Edit Technique
+              </Button>
+            </Stack>
 
-
-      <Link to="/techniques">
-        <button>Back to Techniques</button>
-      </Link>
-          
-      <Link to={`/techniques/edit/${techniqueId}`}>
-        <button>Edit Technique</button>
-      </Link>
-      
-    </div>
+            <EditTechnique refreshTechnique={getTechnique} techniqueId={techniqueId} />
+          </CardContent>
+        </Card>
+      </Container>
+    </Box>
   );
 }
 

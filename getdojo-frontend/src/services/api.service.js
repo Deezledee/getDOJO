@@ -43,10 +43,12 @@ const updateTechnique = (id, requestBody) => {
     .catch(errorHandler);
 };
 
-export default {
+const apiService = {
   getTechnique,
   uploadImage,
   createTechnique,
   updateTechnique,
   createUserDetails
 };
+
+export default apiService;

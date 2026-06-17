@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "DM Sans", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef3fa 100%);
+  color: #0f172a;
 }
 
 code {
@@ -115,33 +115,11 @@ code {
 }
 
 nav {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  color: #ffffff;
-  background-color: #343736;
-  font-family: "Quicksand", sans-serif;
-  justify-content: left;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  all: unset;
 }
 
 nav button {
-  background-color: #343736;
-  border: 1px solid #ffffff;
-  color: #447efb;
-  font-size: 20px;
-  font-weight: bold;
-  border-radius: 30px;
-  text-shadow: 0px 0px 10px #447efb;
-  font-family: "Quicksand", sans-serif;
-  cursor: pointer;
-  outline: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  margin: 10px;
+  all: unset;
 }
 
 nav button:hover {
@@ -149,10 +127,7 @@ nav button:hover {
 }
 
 .logoutButton {
-  position: absolute;
-  top: 9.6px;
-  right: 25px;
-  text-decoration: none;
+  all: unset;
 }
 
 .buttonChuck {
@@ -383,17 +358,17 @@ nav button:hover {
 
 .usernameLogOut {
   display: flex;
-  position: fixed;
   align-items: center;
-  right: 8px;
 }
 
 .createProfilePage {
-  background-image: url("./images/karate-sky.jpg");
+  background:
+    radial-gradient(circle at 10% 10%, rgba(60, 130, 246, 0.15), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(16, 185, 129, 0.12), transparent 42%),
+    linear-gradient(180deg, #f6f9ff 0%, #edf3fb 100%);
   color: #000000;
   min-height: 100vh;
-  background-size: 100% auto;
-  min-height: 100vh;
+  background-size: cover;
   background-position: center;
   margin: 0;
   font-family: "Quicksand", sans-serif;
@@ -539,23 +514,7 @@ nav button:hover {
 }
 
 .containerCreateProfile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  top: 50%;
-  left: 26%;
-  transform: translate(-50%, -50%);
-  min-width: 40vw;
-  border: 5px solid #ffffff;
-  margin-top: 30px;
-  margin-left: 50px;
-  padding-bottom: 60px;
-  background-color: #343736;
-  color: #447efb;
-  font-family: "Quicksand", sans-serif;
-  border-radius: 20px;
+  all: unset;
 }
 
 .heyThere {
@@ -582,8 +541,9 @@ nav button:hover {
 }
 
 .aboutMeBox {
-  height: 100px;
-  width: 400px;
+  min-height: 120px;
+  width: 100%;
+  max-width: 100%;
   margin-bottom: 10px;
 }
 
@@ -609,9 +569,9 @@ nav button:hover {
 }
 
 .searchBarTechniques {
-  margin-top: 130px;
+  margin-top: 110px;
   margin-bottom: 20px;
-  width: 500px;
+  width: min(90vw, 500px);
   height: 70px;
   background-color: #000000;
   border-radius: 20px;
@@ -672,7 +632,7 @@ nav button:hover {
 }
 
 .searchBarMartialArtists {
-  width: 400px;
+  width: min(90vw, 400px);
   height: 60px;
   background-color: #000000;
   border-radius: 20px;
@@ -982,6 +942,98 @@ nav button:hover {
   height: 100vh;
 }
 
+.authVisualPanel {
+  position: relative;
+  overflow: hidden;
+  animation: authImageEntrance 700ms ease-out;
+}
+
+.authVisualPanel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 58, 138, 0.16) 100%);
+}
+
+@keyframes authImageEntrance {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Remove image watermark-style backgrounds and use a consistent modern surface */
+.startPage,
+.homePage,
+.RandomChuckNorrisJoke,
+.martialArtistsPage,
+.cardTechniques,
+.editTechniquePage,
+.quizPage,
+.addTechnique,
+.congratsPage,
+.youLostPage {
+  background-image: none !important;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(56, 189, 248, 0.16), transparent 40%),
+    radial-gradient(circle at 84% 20%, rgba(34, 197, 94, 0.12), transparent 40%),
+    linear-gradient(180deg, #f8fbff 0%, #ecf3fb 100%) !important;
+}
+
+/* Responsive polish for small screens */
+@media (max-width: 900px) {
+  .cardSignUp,
+  .cardLogin,
+  .martialArtistsPage,
+  .techniquesPage,
+  .addTechnique,
+  .editTechniquePage,
+  .quizPage,
+  .privacyPolicyCard,
+  .congratsPage,
+  .youLostPage {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .Signup,
+  .Login,
+  .addTechniqueCard,
+  .editTechniqueTitle,
+  .quizForm,
+  .card {
+    width: min(92vw, 560px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonContainer {
+    margin-top: 55vh;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .loginButton,
+  .signupButton {
+    margin: 0;
+  }
+
+  .buttonChuck {
+    left: 50%;
+    width: calc(100vw - 30px);
+    max-width: 380px;
+  }
+
+  .authVisualPanel {
+    border-top: 1px solid #dbe2ec;
+  }
+}
+
 .addTechniqueCard {
   display: flex;
   flex-direction: column;
@@ -1159,4 +1211,299 @@ nav button:hover {
   height: 100px;
   overflow-wrap: break-word;
   overflow-y: auto;
+}
+
+/* ===== Unified Blue/Grey Modern System ===== */
+:root {
+  --dojo-bg: linear-gradient(180deg, #f7faff 0%, #ecf2fb 100%);
+  --dojo-accent: #1d4ed8;
+  --dojo-accent-dark: #1e3a8a;
+  --dojo-text: #0f172a;
+  --dojo-muted: #475569;
+  --dojo-surface: #ffffff;
+  --dojo-border: #dbe3ef;
+  --dojo-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+}
+
+.startPage,
+.homePage,
+.RandomChuckNorrisJoke,
+.techniquesPage,
+.cardTechniques,
+.martialArtistsPage,
+.privacyPolicy,
+.privacyPolicyCard,
+.addTechnique,
+.editTechniquePage,
+.quizPage,
+.congratsPage,
+.youLostPage,
+.techniqueDetails {
+  background: var(--dojo-bg) !important;
+  color: var(--dojo-text);
+}
+
+.startPage {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 32px 18px;
+}
+
+.buttonContainer {
+  margin-top: 0;
+  gap: 14px;
+}
+
+.Signup,
+.Login,
+.addTechniqueCard,
+.editTechniqueTitle,
+.quizForm,
+.card,
+.privacyPolicy,
+.cardChuck,
+.secondCardCreate {
+  background: var(--dojo-surface) !important;
+  color: var(--dojo-text) !important;
+  border: 1px solid var(--dojo-border) !important;
+  box-shadow: var(--dojo-shadow) !important;
+  text-shadow: none !important;
+}
+
+.hereAreSome,
+.editTitle,
+.editDescription,
+.congrats,
+.youLostTitle,
+.addYouOwn,
+.heyThere,
+.userAboutMe,
+.aboutMeChangeTitle {
+  background: transparent !important;
+  border: none !important;
+  color: var(--dojo-text) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.loginButton,
+.signupButton,
+.login-button,
+.SignupThroughSignupButton,
+.signupButtonThroughLogin,
+.loginButtonThroughLogin,
+.buttonChuck,
+.deleteTechniqueButton,
+.editTechniqueButton,
+.uploadButton,
+.saveChangesCreateButton,
+.updateTechniqueButton,
+.submitQuizButton,
+.returnToHomeCongrats,
+.tryAgainButton,
+.returnToHomeLost,
+.uploadButtonAddTechnique,
+.saveNewAddedTechnique,
+.likeButton {
+  background: linear-gradient(135deg, var(--dojo-accent), var(--dojo-accent-dark)) !important;
+  color: #ffffff !important;
+  border: none !important;
+  text-shadow: none !important;
+  box-shadow: 0 8px 18px rgba(29, 78, 216, 0.26) !important;
+  border-radius: 12px !important;
+}
+
+.loginButton:hover,
+.signupButton:hover,
+.login-button:hover,
+.SignupThroughSignupButton:hover,
+.signupButtonThroughLogin:hover,
+.loginButtonThroughLogin:hover,
+.buttonChuck:hover,
+.deleteTechniqueButton:hover,
+.editTechniqueButton:hover,
+.uploadButton:hover,
+.saveChangesCreateButton:hover,
+.updateTechniqueButton:hover,
+.submitQuizButton:hover,
+.returnToHomeCongrats:hover,
+.tryAgainButton:hover,
+.returnToHomeLost:hover,
+.uploadButtonAddTechnique:hover,
+.saveNewAddedTechnique:hover,
+.likeButton:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+input,
+textarea,
+select,
+.addTitleBox,
+.addTechniqueBox,
+.editTechniqueTitleBox,
+.editTechniqueDescriptionBox,
+.aboutMeBox,
+.signUpInput,
+.loginInput,
+.searchBarTechniques,
+.searchBarMartialArtists {
+  background: #ffffff !important;
+  border: 1px solid var(--dojo-border) !important;
+  color: var(--dojo-text) !important;
+  border-radius: 12px !important;
+  box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #90a0b8;
+}
+
+.techniquesPage,
+.martialArtistsPage,
+.quizPage,
+.editTechniquePage,
+.addTechnique,
+.homePage {
+  padding-top: 96px;
+}
+
+.cardTechniques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.card {
+  width: auto;
+  margin: 0;
+  font-size: 15px;
+}
+
+.cardTechniques > a {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonChuck {
+  position: static !important;
+  transform: none !important;
+  margin: 20px auto 6px;
+}
+
+.privacyPolicy {
+  font-size: 18px;
+  line-height: 1.65;
+  padding: 104px 20px 24px;
+  box-shadow: none !important;
+}
+
+.privacyPolicyCard {
+  padding: 0;
+  background: transparent;
+}
+
+.codedBy,
+.getDoJo,
+.nameMartialArtist,
+.ranking,
+.usernameTopScreen,
+.martialArtistsLink,
+.techniquesLink,
+.question {
+  color: var(--dojo-text) !important;
+  text-shadow: none !important;
+}
+
+.quizForm {
+  width: min(92vw, 860px);
+  margin-top: 28px;
+}
+
+.youLostButtons {
+  gap: 14px;
+}
+
+.unsu {
+  width: min(96vw, 1100px) !important;
+  margin: 22px auto 28px !important;
+  border-radius: 16px;
+  border: 1px solid var(--dojo-border);
+  box-shadow: var(--dojo-shadow);
+}
+
+.techniqueDetails {
+  min-height: 100vh;
+  padding: 110px 20px 30px;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+}
+
+.techniqueDetails > h1,
+.techniqueDetails > p {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .buttonContainer {
+    flex-direction: column;
+  }
+
+  .youLostButtons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .card,
+  .Signup,
+  .Login,
+  .addTechniqueCard,
+  .quizForm {
+    width: min(94vw, 560px);
+  }
+}
+
+/* Responsive safety net across all pages */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .cardTechniques,
+  .card-container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .editTechniqueTitle,
+  .addTechniqueCard,
+  .privacyPolicy,
+  .quizForm,
+  .cardChuck {
+    width: min(94vw, 900px) !important;
+  }
+
+  .editTechniqueTitleBox,
+  .editTechniqueDescriptionBox,
+  .addTitleBox,
+  .addTechniqueBox,
+  .aboutMeBox,
+  .searchBarTechniques,
+  .searchBarMartialArtists {
+    width: min(92vw, 560px) !important;
+  }
 }

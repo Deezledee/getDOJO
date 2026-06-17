@@ -4,6 +4,25 @@ import { AuthContext } from "./../context/auth.context";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import service from "../services/api.service";
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Container,
+  Divider,
+  FormControlLabel,
+  Grid,
+  Checkbox,
+  Paper,
+  Stack,
+  TextField,
+  Typography,
+  Chip,
+} from "@mui/material";
+import CloudUploadOutlinedIcon from "@mui/icons-material/CloudUploadOutlined";
+import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 
 function CreateProfile() {
   const [isChecked, setIsChecked] = useState(false);
@@ -11,8 +30,13 @@ function CreateProfile() {
   const [picture, setPicture] = useState("");
   const { user } = useContext(AuthContext);
   const API_URL = process.env.REACT_APP_API_URL;
+  const userInitial = (user?.name || "G").charAt(0).toUpperCase();
 
   useEffect(() => {
+    if (!user?._id || !API_URL) {
+      return;
+    }
+
     axios
       .get(`${API_URL}/api/create-profile-page/${user._id}`)
       .then((response) => {
@@ -25,7 +49,7 @@ function CreateProfile() {
       .catch((error) => {
         console.log(error);
       });
-  }, [user._id]);
+  }, [API_URL, user?._id]);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -53,6 +77,11 @@ function CreateProfile() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if (!API_URL || !user?._id) {
+      alert("Server URL is missing. Please refresh and try again.");
+      return;
+    }
+
     axios
       .post(`${API_URL}/api/create-profile-page/${user._id}`, {
         about: about,
@@ -60,7 +89,7 @@ function CreateProfile() {
         picture: picture,
       })
       .then((response) => {
-        window.location.reload();
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -68,77 +97,175 @@ function CreateProfile() {
       });
   };
 
+  if (!user) {
+    return null;
+  }
+
   return (
-    <div className="createProfilePage">
+    <Box className="createProfilePage">
       <Navbar />
-      <div className="cardsFormContainer">
-        <div className="containerCreateProfile">
-          <div className="oneCardCreate">
-            <h1 className="heyThere">
-              Hey there,{" "}
-              <span className="userNameCreate">{user && user.name} 🥋</span>
-              <span>{user && user.picture}</span>
-            </h1>
-            <form className="formCreate" onSubmit={handleSubmit}>
-              <br />
-              <label className="userAboutMe" htmlFor="about">
-                About me 🔷:
-              </label>
-              <textarea
-                className="aboutMeBox"
-                id="about"
-                name="about"
-                value={about}
-                onChange={handleAboutChange}
-              ></textarea>
-              <br />
-              <div className="termsAndUploadContainer">
-                <label htmlFor="termsAccepted">
-                  <input
-                    type="checkbox"
-                    id="terms-checkbox"
-                    name="termsAccepted"
-                    checked={isChecked}
-                    onChange={handleCheckboxChange}
+      <Container maxWidth="lg" sx={{ pt: { xs: 11, md: 13 }, pb: 6 }}>
+        <Paper
+          elevation={0}
+          sx={{
+            borderRadius: 4,
+            border: "1px solid #e6e9ef",
+            p: { xs: 2, sm: 3 },
+            mb: 3,
+            background: "linear-gradient(135deg, #f9fafc 0%, #eef2f9 100%)",
+          }}
+        >
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            alignItems={{ xs: "flex-start", sm: "center" }}
+            justifyContent="space-between"
+          >
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Avatar
+                src={picture || undefined}
+                sx={{ width: 68, height: 68, bgcolor: "#0f172a", fontWeight: 700 }}
+              >
+                {userInitial}
+              </Avatar>
+              <Box>
+                <Typography variant="h5" sx={{ fontWeight: 800, color: "#0f172a" }}>
+                  Hey {user.name}, tune your profile
+                </Typography>
+                <Typography variant="body2" sx={{ color: "#475569" }}>
+                  This page is now responsive and optimized for mobile, tablet, and desktop.
+                </Typography>
+              </Box>
+            </Stack>
+            <Chip
+              icon={<CheckCircleOutlineOutlinedIcon />}
+              label={isChecked ? "Terms accepted" : "Terms pending"}
+              color={isChecked ? "success" : "default"}
+              variant={isChecked ? "filled" : "outlined"}
+            />
+          </Stack>
+        </Paper>
+
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={7}>
+            <Card
+              elevation={0}
+              sx={{
+                borderRadius: 4,
+                border: "1px solid #e5e7eb",
+                height: "100%",
+              }}
+            >
+              <CardContent sx={{ p: { xs: 2.2, sm: 3 } }}>
+                <Typography variant="h6" sx={{ fontWeight: 800, color: "#111827", mb: 0.5 }}>
+                  About Me
+                </Typography>
+                <Typography variant="body2" sx={{ color: "#6b7280", mb: 2 }}>
+                  Share your martial arts journey, goals, and background.
+                </Typography>
+
+                <Box component="form" onSubmit={handleSubmit}>
+                  <TextField
+                    id="about"
+                    name="about"
+                    multiline
+                    minRows={6}
+                    fullWidth
+                    value={about}
+                    onChange={handleAboutChange}
+                    placeholder="Tell your story..."
                   />
-                  <Link
-                    to="/privacy-policy-page"
-                    target="_blank"
-                    className="termsAndConditionsLink"
+
+                  <Stack spacing={1.2} sx={{ mt: 2 }}>
+                    <FormControlLabel
+                      control={<Checkbox checked={isChecked} onChange={handleCheckboxChange} />}
+                      label={
+                        <Typography variant="body2" sx={{ color: "#334155" }}>
+                          I agree to the{" "}
+                          <Link to="/privacy-policy-page" target="_blank" className="termsAndConditionsLink">
+                            Terms & Conditions
+                          </Link>
+                        </Typography>
+                      }
+                    />
+
+                    <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5}>
+                      <Button
+                        component="label"
+                        variant="outlined"
+                        startIcon={<CloudUploadOutlinedIcon />}
+                        sx={{ borderRadius: 2, textTransform: "none", fontWeight: 700 }}
+                      >
+                        Upload Image
+                        <input type="file" hidden id="picture" name="picture" onChange={handlePictureChange} />
+                      </Button>
+
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{
+                          borderRadius: 2,
+                          textTransform: "none",
+                          fontWeight: 800,
+                          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+                        }}
+                      >
+                        Save Changes
+                      </Button>
+                    </Stack>
+                  </Stack>
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={12} md={5}>
+            <Card
+              elevation={0}
+              sx={{
+                borderRadius: 4,
+                border: "1px solid #e5e7eb",
+                background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)",
+              }}
+            >
+              <CardContent sx={{ p: { xs: 2.2, sm: 3 } }}>
+                <Typography variant="h6" sx={{ fontWeight: 800, color: "#111827" }}>
+                  Live Preview
+                </Typography>
+                <Divider sx={{ my: 2 }} />
+
+                <Stack spacing={2} alignItems="center">
+                  <Avatar
+                    src={picture || undefined}
+                    sx={{ width: 112, height: 112, bgcolor: "#111827", fontSize: 38, fontWeight: 700 }}
                   >
-                    Terms & Conditions
-                  </Link>
-                </label>
-                <div className="uploadContainer">
-                  <label htmlFor="picture" className="uploadButton">
-                    Upload Image
-                  </label>
-                  <input
-                    type="file"
-                    id="picture"
-                    name="picture"
-                    onChange={handlePictureChange}
+                    {userInitial}
+                  </Avatar>
+
+                  <Typography variant="h6" sx={{ fontWeight: 800, color: "#0f172a" }}>
+                    {user.name}
+                  </Typography>
+
+                  <Typography
+                    variant="body2"
+                    sx={{ color: "#374151", textAlign: "center", width: "100%", maxWidth: 360 }}
+                  >
+                    {about || "Your profile text will appear here as you type."}
+                  </Typography>
+
+                  <Chip
+                    size="small"
+                    label={isChecked ? "Policy accepted" : "Policy not accepted"}
+                    color={isChecked ? "success" : "warning"}
+                    variant={isChecked ? "filled" : "outlined"}
                   />
-                </div>
-                <button className="saveChangesCreateButton" type="submit">
-                  Save Changes 🥊
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div className="secondCardCreate">
-          <div className="postedForm">
-            <h1 className="aboutMeChangeTitle">About me 🔷:</h1>
-            <p className="aboutMeChangeDescription">{about}</p>
-            <p>{isChecked}</p>
-            {picture && (
-              <img className="newuserImage" src={picture} alt="" width="200" />
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 }
 
